@@ -1,7 +1,7 @@
 node
  {
   
-  def mavenHome = tool name: "maven3.6.2"
+  def mavenHome = tool name: "maven3.8.4"
   
       echo "GitHub BranhName ${env.BRANCH_NAME}"
       echo "Jenkins Job Number ${env.BUILD_NUMBER}"
@@ -15,7 +15,7 @@ node
   
   stage("CheckOutCodeGit")
   {
-   git branch: 'development', credentialsId: '65fb834f-a83b-4fe7-8e11-686245c47a65', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
+   git branch: 'development', credentialsId: '65fb834f-a83b-4fe7-8e11-686245c47a65', url:'https://github.com/Constance-Tech/maven-web-app'
  }
  
  stage("Build")
